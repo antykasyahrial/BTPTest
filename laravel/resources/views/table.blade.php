@@ -50,11 +50,11 @@
                 name : 'methodname',
             },
             {
-                data: null, 
+                data: 'subject_array', 
                 name: 'startdate',
                 render : function(data,type,row,meta){
                     var result = [];
-                    data.subject_array.map(function(item){
+                    data.map(function(item){
                         if( (new Date(item.date)).getMonth() == 0 ){
                             result.push('<li>'+item.data+'</li>');
                         }
